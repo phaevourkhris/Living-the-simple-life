@@ -1,0 +1,291 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    width: 80%;
+    max-width:960px;
+    min-width: 325px;
+    margin: 0px auto;
+    /* border: 1px solid magenta; */
+}
+
+h1,
+h2,
+h3,
+.about-me-content,
+.recent-post-title{
+    color: #143774;
+}
+
+h1{
+    font-size: 2.1rem;
+    font-family: 'lora', sans-serif;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+h2{
+    margin-bottom: .4em;
+    margin-top: 0;
+    font-family: 'lora', sans-serif;
+    font-weight: 400;
+}
+
+
+h3{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+p{
+    color: #707070;
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.75rem;
+    /* letter-spacing: 0.2rem; */
+}
+/* 
+    header styles
+*/
+header{
+    background: #F8F8F8;
+    margin-bottom: 50px;
+    height: 265px;
+}
+
+.header-flex{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-subtitle{
+    font-weight: 700;
+    letter-spacing: .15rem;
+    font-size: 0.75rem;
+    color: #1792D2;
+    margin-top: 0;
+}
+.nav-bar{
+    margin-left: 1em;
+}
+
+.nav-bar{
+    margin:0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-bar-item{
+    list-style: none;
+    margin-left: 2em;
+}
+.nav-bar-item a{
+    text-decoration: none;
+    font-size: 1rem;
+    letter-spacing: 3.2px;
+    color: #717171;
+    font-weight: 700;
+    padding-bottom: 3px;
+}
+
+.nav-bar-item a:hover,
+.nav-bar-item a:focus{
+    color: #1792D2;
+}
+
+.current-page{
+    border-bottom: 1px solid #717171;
+}
+
+a.current-page:hover,
+a.current-page:focus{
+    color: #717171;
+}
+/* 
+    layout
+*/
+
+.container-flex, .articles-flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-flex{
+    margin-bottom: 2em;
+}
+main{
+    width: 65%;
+}
+
+.side-bar{
+    width: 30%;
+}
+
+.featured{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #EBEBEB;
+    padding-bottom: 40px;
+}
+
+.featured img{
+    order: -2;
+    height: 308px;
+}
+
+.date-comments{
+    order: -1;
+    color: #707070;
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin: 0 0 2em 0;
+}
+
+span{
+    font-weight:700;
+}
+
+.read-more{
+    color: #1792D2;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 0.175rem;
+    font-size: 0.875rem;
+}
+
+.articles{
+    margin-bottom: 2.5em;
+}
+
+.article-secondary{
+    min-width: 160px;
+    width: 35%;
+}
+
+.article-secondary .article-image{
+    
+    height: 300px;
+    margin-bottom: 0;
+}
+
+.article-content{
+    width: 60%;
+    padding: 0;
+}
+
+.about-me, .recent-posts{
+    border: 20px solid #EBEBEB;
+    padding: 1em 2em;
+}
+
+.about-me img{
+    margin-bottom: 0;
+}
+
+.about-me{
+    margin-bottom: 3em;
+}
+
+.about-me-content{
+    font-size: 0.8rem;
+}
+
+.recent-post{
+    border-bottom: 1px solid #EBEBEB;
+    margin-bottom: 2em;
+}
+
+.recent-post:last-child{
+    border:none;
+    margin-bottom: 0;
+}
+
+footer{
+    background: #143774;
+    text-align: center;
+    padding: 40px;
+    margin-top: auto;
+}
+
+footer p{
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 0;
+}
+
+footer p:first-child{
+    font-weight: 700;
+}
+
+footer p:last-child{
+    font-weight: 300;
+    margin-top: 0;
+}
+
+/* About me page extra */
+.about-me-main img{
+    height: 308px;
+}
+
+.intro{
+    color: #1792D2;
+    font-size: 1.3rem;
+    font-family: 'lora', sans-serif;
+    font-weight: 400;
+}
+.intro:first-child{
+    color: #143774;
+    font-size: 1.5rem;
+}
+
+/* Media Queries for responsiveness */
+
+@media(max-width: 940px){
+    .header-flex,
+    .container-flex,
+    .nav-bar,
+    .articles-flex{
+        flex-direction:column;
+    }
+
+    .nav-bar{
+        text-align: center;
+    }
+
+    .nav-bar-item{
+        margin: 0 0 1.5em 0;
+    }
+    
+    main,
+    .article-secondary,
+    .article-content,
+    .side-bar{
+        width: 100%;
+    }
+
+    /* article{
+        margin-bottom: 2em;
+    } */
+}
