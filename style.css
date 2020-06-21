@@ -262,7 +262,7 @@ footer p:last-child{
 
 /* Media Queries for responsiveness */
 
-@media(max-width: 940px){
+@media(max-width: 950px){
     .header-flex,
     .container-flex,
     .nav-bar,
@@ -285,7 +285,5 @@ footer p:last-child{
         width: 100%;
     }
 
-    /* article{
-        margin-bottom: 2em;
-    } */
+    
 }
